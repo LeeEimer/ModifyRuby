@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 24
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -476,7 +476,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 10fbffff
+      m_ExpandedIDs: 2af6ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -534,8 +534,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -759,9 +759,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.5407495, y: 3.9760814, z: -10.1905775}
+    m_Target: {x: 4.4637833, y: -2.9650447, z: -10.03098}
     speed: 2
-    m_Value: {x: 6.189513, y: 4.148762, z: -10.199389}
+    m_Value: {x: 4.520034, y: -2.9951687, z: -10.032539}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -812,9 +812,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 18.700117
+    m_Target: 3.3086014
     speed: 2
-    m_Value: 19.581274
+    m_Value: 3.464504
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -870,7 +870,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1398
+  m_LastSelectedObjectID: -4420
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -985,8 +985,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -25600
-    y: -25086.4
+    x: -1536
+    y: 556.8
     width: 1083.8
     height: 218.59998
   m_ViewDataDictionary: {fileID: 0}
@@ -1006,22 +1006,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/UnityTechnologies
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/UnityTechnologies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Ainsl\OneDrive\Desktop\GitHub Repositories\ModifyRuby\ModifyRuby\RubyAdventureActive
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 54590000
-    m_LastClickedID: 22868
-    m_ExpandedIDs: 000000002e59000030590000325900003459000036590000385900003a5900005459000000ca9a3b
+    scrollPos: {x: 0, y: 233.40002}
+    m_SelectedIDs: 40590000
+    m_LastClickedID: 22848
+    m_ExpandedIDs: 0000000040590000425900004459000046590000485900004a5900004c59000066590000685900008e59000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e59000030590000325900003459000036590000385900003a590000
+    m_ExpandedIDs: 0000000040590000425900004459000046590000485900004a5900004c590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
