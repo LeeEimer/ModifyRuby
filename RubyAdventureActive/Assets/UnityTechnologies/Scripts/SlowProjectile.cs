@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class SlowProjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Rigidbody2D rigidbody2d;
+
+    void Awake()
     {
-        
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //destroy the projectile when it reach a distance of 1000.0f from the origin
+        if (transform.position.magnitude > 1000.0f)
+            Destroy(gameObject);
+    }
+
+    //called by the player controller after it instantiate a new projectile to launch it.
+    public void Launch(Vector2 direction, float force)
+    {
+        rigidbody2d.AddForce(direction * force);
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Enemy e = other.collider.GetComponent<Enemy>();
+        HardEnemy b = other.collider.GetComponent<HardEnemy>();
+
+        //if the object we touched wasn't an enemy, just destroy the projectile.
+        if (e != null)
+        {
+            e.Fix();
+        }
+        if (b != null)
+        {
+            b.Fix();
+        }
+
+        Destroy(gameObject);
     }
 }
