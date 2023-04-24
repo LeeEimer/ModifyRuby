@@ -3,7 +3,7 @@ using UnityEngine;
 //using Unity.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 
 public class RubyController : MonoBehaviour
 {
@@ -301,10 +301,10 @@ public class RubyController : MonoBehaviour
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
     }
 
-    public void Dash(){
+    IEnumerator Dash(){
         isInvincible = true;
         speed = 8; 
-        
+
     }
 
 }
