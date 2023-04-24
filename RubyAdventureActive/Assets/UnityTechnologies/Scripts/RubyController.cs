@@ -313,6 +313,10 @@ public class RubyController : MonoBehaviour
         SlowCogCount.text = "Slow Ammo: " + slowCogLimit.ToString();
     }
 
+    public void setDashText(){
+        
+    }
+
     IEnumerator Dash(){
         if(dashLimit >= 1){
             isInvincible = true;
