@@ -309,7 +309,7 @@ public class RubyController : MonoBehaviour
         WaitForSecondsRealtime(3);
         speed = 4;
         isInvincible = false;
-
+        return null; 
     }
 
     private void WaitForSecondsRealtime(int v)
