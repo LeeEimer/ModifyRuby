@@ -68,17 +68,12 @@ public class RubyController : MonoBehaviour
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
-    private float dashLen; 
-    private float dashCoolDown;
-    public int dashSpeed = 8;
 
     void Start()
     {
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentSpeed = 4;
-        dashLen = 0.5f;
-        dashCoolDown = 2f;
 
         // ======== HEALTH ==========
         invincibleTimer = -1.0f;
@@ -309,7 +304,7 @@ public class RubyController : MonoBehaviour
     }
 
     public void Dash(){
-        if(dashLen)
+        
     }
 
     
