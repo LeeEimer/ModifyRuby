@@ -32,7 +32,7 @@ public class SlowProjectile : MonoBehaviour
         //if the object we touched wasn't an enemy, just destroy the projectile.
         if (e != null)
         {
-            e.Fix();
+            e.slowSpeed();
         }
         if (b != null)
         {
