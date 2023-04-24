@@ -68,10 +68,11 @@ public class RubyController : MonoBehaviour
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
+    private float dashLen = 0.5f; 
+    private float dashCoolDown = 3f;
 
     void Start()
     {
-        StartCoroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentSpeed = 4;
@@ -304,17 +305,9 @@ public class RubyController : MonoBehaviour
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
     }
 
-    IEnumerator Dash(){
-        isInvincible = true;
-        currentSpeed = 8; 
-        WaitForSecondsRealtime(3);
-        currentSpeed = 4;
-        isInvincible = false;
-        return null; 
+    public void Dash(){
+        
     }
 
-    private void WaitForSecondsRealtime(int v)
-    {
-        throw new NotImplementedException();
-    }
+    
 }
