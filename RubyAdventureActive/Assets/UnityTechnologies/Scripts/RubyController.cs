@@ -62,7 +62,7 @@ public class RubyController : MonoBehaviour
     public GameObject BotTextObj;
     public static int cogLimit; 
     public static int slowCogLimit;
-    public Boolean slowCog; 
+    public Boolean slowCog = false; 
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
@@ -167,6 +167,7 @@ public class RubyController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.V)){
             if(slowCogLimit >= 1){
+                slowCog = true;
                 slowCogLimit--;
                 LaunchProjectile();
             }
@@ -234,10 +235,12 @@ public class RubyController : MonoBehaviour
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        Projectile projectile = projectileObject.GetComponent<Projectile>();
-
-        
-        projectile.Launch(lookDirection, 300);
+        if(slowCog == true){
+            SlowProjectile slowprojectile = projectileObject.GetComponent<SlowProjectile>()
+        }else{
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            projectile.Launch(lookDirection, 300);
+        }
 
         animator.SetTrigger("Launch");
         audioSource.PlayOneShot(shootingSound);
