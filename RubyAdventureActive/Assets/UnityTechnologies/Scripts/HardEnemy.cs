@@ -94,4 +94,8 @@ public class HardEnemy : MonoBehaviour
         audioSource.PlayOneShot(hitSound);
         audioSource.PlayOneShot(fixedSound);
     }
+
+    public void slowSpeed(){
+        speed = speed / 2;
+    }
 }

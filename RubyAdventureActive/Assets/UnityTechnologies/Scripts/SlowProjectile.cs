@@ -36,7 +36,7 @@ public class SlowProjectile : MonoBehaviour
         }
         if (b != null)
         {
-            b.Fix();
+            b.slowSpeed();
         }
 
         Destroy(gameObject);
