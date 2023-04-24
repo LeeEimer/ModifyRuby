@@ -159,14 +159,9 @@ public class RubyController : MonoBehaviour
         // ================ DASH ==========================
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            if(finDash = true){
-                StartCoroutine(Dash());
-                Dash();
-                dashLimit--;
-                finDash
-            }else{
-                currentSpeed = 4;
-            }
+            StartCoroutine(Dash());
+            Dash();
+            dashLimit--;
         }
         // ============== ANIMATION =======================
 
@@ -315,6 +310,7 @@ public class RubyController : MonoBehaviour
             isInvincible = true;
             currentSpeed = 8;
             yield return new WaitForSecondsRealtime(3);
+            currentSpeed = 4;
         }
     }
 
