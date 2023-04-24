@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 493639705408847132}
   - component: {fileID: 1361374905421410378}
   - component: {fileID: 7628296385729402240}
-  - component: {fileID: 3924464876541805238}
   m_Layer: 0
   m_Name: SlowCogPickup
   m_TagString: Untagged
@@ -146,16 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea62b783f90acd45a819805f7e1bdf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectedClip: {fileID: 0}
---- !u!114 &3924464876541805238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8541936738076216022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec3655b1eac1ab4093025f0b466f246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  collectedClip: {fileID: 8300000, guid: 173a14cf06354c643b46b235f2a4f974, type: 3}
