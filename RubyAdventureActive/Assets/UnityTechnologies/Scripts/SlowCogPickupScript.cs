@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class SlowCogPickupScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioClip collectedClip;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
+        RubyController controller = other.GetComponent<RubyController>();
+
+        if (controller != null)
+        {
+
+            RubyController.cogLimit += 4;
+            Destroy(gameObject);
+
+            controller.PlaySound(collectedClip);
+
+        }
+
     }
 }
