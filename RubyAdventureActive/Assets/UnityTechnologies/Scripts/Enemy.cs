@@ -8,7 +8,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 	// ====== ENEMY MOVEMENT ========
-	public float speed;
+	public float speed = 0;
 	public float timeToChange;
 	public bool horizontal;
 
@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
 
 		audioSource = GetComponent<AudioSource>();
 		smokeParticleEffect.Play();
+		setSpeed(2);
 	}
 	
 	void Update()
