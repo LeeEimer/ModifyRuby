@@ -177,6 +177,9 @@ public class RubyController : MonoBehaviour
                 slowCogLimit--;
                 LaunchProjectile();
             }
+            if(slowCogLimit < 1){
+                slowCog = false;
+            }
         }
 
         // ======== DIALOGUE ==========
