@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
 		audioSource.PlayOneShot(fixedSound);
 	}
 
-	public void slowSpeed(){
-		speed = speed/2; 
+	public void setSpeed(int x){
+		speed = x;  
 	}
 }
