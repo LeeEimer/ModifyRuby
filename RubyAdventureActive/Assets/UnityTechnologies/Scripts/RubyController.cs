@@ -309,7 +309,7 @@ public class RubyController : MonoBehaviour
         if(dashLimit >= 1){
             isInvincible = true;
             currentSpeed = 8;
-            yield return new WaitForSecondsRealtime(3);
+            yield return new WaitForSecondsRealtime(2);
             currentSpeed = 4;
         }
     }
