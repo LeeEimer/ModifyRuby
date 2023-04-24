@@ -71,6 +71,7 @@ public class RubyController : MonoBehaviour
 
     void Start()
     {
+        StartCaroutine(RubyController);
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
 
