@@ -71,7 +71,6 @@ public class RubyController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentSpeed = 4;
@@ -304,7 +303,7 @@ public class RubyController : MonoBehaviour
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
     }
 
-    Ienumerator Dash(){
+    IEnumerator Dash(){
         isInvincible = true;
         currentSpeed = 8;
         yield return new WaitForSecondsRealtime(3);
