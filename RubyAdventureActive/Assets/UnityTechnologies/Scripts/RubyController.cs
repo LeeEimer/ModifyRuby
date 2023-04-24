@@ -57,6 +57,8 @@ public class RubyController : MonoBehaviour
     public TextMeshProUGUI LoseText;
     public TextMeshProUGUI FixedBots;
     public TextMeshProUGUI AmmoCount;
+    public TextMeshProUGUI SlowCogCount;
+    public GameObject SlowCogTextObj;
     public GameObject AmmoTextObj;
     public GameObject WinTextObj;
     public GameObject LoseTextObj;
@@ -93,6 +95,8 @@ public class RubyController : MonoBehaviour
         WinTextObj.SetActive(false);
         LoseTextObj.SetActive(false);
         BotTextObj.SetActive(true);
+        SlowCogTextObj.SetActive(false);
+        setSlowAmmoText();
         setAmmoText();
         setBotText();
         winEnabled = false;
@@ -303,6 +307,10 @@ public class RubyController : MonoBehaviour
     public void setAmmoText()
     {
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
+    }
+
+    public void setSlowAmmoText(){
+        SlowCogCount.text = "Slow Ammo: " + slowCogLimit.ToString();
     }
 
     IEnumerator Dash(){
