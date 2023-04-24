@@ -58,6 +58,8 @@ public class RubyController : MonoBehaviour
     public TextMeshProUGUI FixedBots;
     public TextMeshProUGUI AmmoCount;
     public TextMeshProUGUI SlowCogCount;
+    public TextMeshProUGUI DashCount; 
+    public GameObject DashCountObj;
     public GameObject SlowCogTextObj;
     public GameObject AmmoTextObj;
     public GameObject WinTextObj;
@@ -95,10 +97,10 @@ public class RubyController : MonoBehaviour
         WinTextObj.SetActive(false);
         LoseTextObj.SetActive(false);
         BotTextObj.SetActive(true);
-        SlowCogTextObj.SetActive(false);
         setSlowAmmoText();
         setAmmoText();
         setBotText();
+        setDashText();
         winEnabled = false;
 
     }
@@ -314,7 +316,7 @@ public class RubyController : MonoBehaviour
     }
 
     public void setDashText(){
-        
+        DashCount.text = "Dashes: " + dashLimit.ToString();
     }
 
     IEnumerator Dash(){
