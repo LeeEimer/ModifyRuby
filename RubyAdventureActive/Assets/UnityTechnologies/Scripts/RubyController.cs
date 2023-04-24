@@ -154,7 +154,11 @@ public class RubyController : MonoBehaviour
 
         currentInput = move;
 
-
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(dashLimit >= 1){
+                
+            }
+        }
         // ============== ANIMATION =======================
 
         animator.SetFloat("Look X", lookDirection.x);
