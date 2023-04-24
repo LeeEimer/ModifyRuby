@@ -61,6 +61,7 @@ public class RubyController : MonoBehaviour
     public GameObject LoseTextObj;
     public GameObject BotTextObj;
     public static int cogLimit; 
+    public static int slowCogLimit;
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
