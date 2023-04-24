@@ -68,6 +68,7 @@ public class RubyController : MonoBehaviour
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
+    public Boolean finDash = true;
 
     void Start()
     {
@@ -160,8 +161,6 @@ public class RubyController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             StartCoroutine(Dash());
             Dash(); 
-            isInvincible = false;
-            currentSpeed = 4;
             dashLimit--;
         }
         // ============== ANIMATION =======================
