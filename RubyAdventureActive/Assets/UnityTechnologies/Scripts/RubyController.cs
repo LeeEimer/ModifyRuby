@@ -159,6 +159,7 @@ public class RubyController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)){
             Dash(); 
+            dashLimit--;
         }
         // ============== ANIMATION =======================
 
