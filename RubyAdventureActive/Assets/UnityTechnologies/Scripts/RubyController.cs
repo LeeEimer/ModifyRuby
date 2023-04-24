@@ -158,7 +158,10 @@ public class RubyController : MonoBehaviour
         // ================ DASH ==========================
 
         if(Input.GetKeyDown(KeyCode.Space)){
+            StartCoroutine(Dash());
             Dash(); 
+            isInvincible = false;
+            currentSpeed = 4;
             dashLimit--;
         }
         // ============== ANIMATION =======================
@@ -304,11 +307,11 @@ public class RubyController : MonoBehaviour
     }
 
     IEnumerator Dash(){
-        isInvincible = true;
-        currentSpeed = 8;
-        yield return new WaitForSecondsRealtime(3);
-        isInvincible = false;
-        currentSpeed = 4;
+        if(dashLimit >= 1){
+            isInvincible = true;
+            currentSpeed = 8;
+            yield return new WaitForSecondsRealtime(3);
+        }
     }
 
     
