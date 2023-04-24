@@ -158,7 +158,7 @@ public class RubyController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             if(dashLimit >= 1){
                 speed = 8; 
-                WaitForSecondsRealTime(3);
+                
                 speed = 4;
             }
         }
