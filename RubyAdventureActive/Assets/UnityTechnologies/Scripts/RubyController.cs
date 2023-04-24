@@ -71,6 +71,7 @@ public class RubyController : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
 
@@ -304,7 +305,14 @@ public class RubyController : MonoBehaviour
     IEnumerator Dash(){
         isInvincible = true;
         speed = 8; 
+        WaitForSecondsRealtime(3);
+        speed = 4;
+        isInvincible = false;
 
     }
 
+    private void WaitForSecondsRealtime(int v)
+    {
+        throw new NotImplementedException();
+    }
 }
