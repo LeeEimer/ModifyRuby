@@ -153,7 +153,8 @@ public class RubyController : MonoBehaviour
         }
 
         currentInput = move;
-
+        
+        //Dash
         if(Input.GetKeyDown(KeyCode.Space)){
             if(dashLimit >= 1){
                 
