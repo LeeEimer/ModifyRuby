@@ -163,6 +163,13 @@ public class RubyController : MonoBehaviour
                 LaunchProjectile();
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.V)){
+            if(slowCogLimit >= 1){
+                slowCogLimit--;
+                LaunchProjectile();
+            }
+        }
     
         // ======== DIALOGUE ==========
         if (Input.GetKeyDown(KeyCode.X))
