@@ -18,6 +18,7 @@ public class RubyController : MonoBehaviour
 
     // ======== PROJECTILE ==========
     public GameObject projectilePrefab;
+    public GameObject slowProjectilePrefab;
 
     // ======== AUDIO ==========
     public AudioClip hitSound;
@@ -244,10 +245,11 @@ public class RubyController : MonoBehaviour
     void LaunchProjectile()
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
-        //GameObject slowprojectileObject = Instantiate()
+        GameObject slowprojectileObject = Instantiate(slowProjectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
         if (slowCog == true)
         {
-            SlowProjectile slowprojectile = projectileObject.GetComponent<SlowProjectile>();
+            SlowProjectile slowprojectile = slowprojectileObject.GetComponent<SlowProjectile>();
             slowprojectile.Launch(lookDirection, 300);
         }
         else
