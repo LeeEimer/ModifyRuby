@@ -154,6 +154,7 @@ public class RubyController : MonoBehaviour
 
         currentInput = move;
         
+        // ================ DASH ==========================
 
         if(Input.GetKeyDown(KeyCode.Space)){
             Dash(); 
@@ -301,7 +302,9 @@ public class RubyController : MonoBehaviour
     }
 
     public void Dash(){
-
+        isInvincible = true;
+        speed = 8; 
+        
     }
 
 }
