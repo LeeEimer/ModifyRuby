@@ -71,7 +71,7 @@ public class RubyController : MonoBehaviour
 
     void Start()
     {
-        StartCaroutine(Dash());
+        StartCoroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
 
@@ -303,7 +303,7 @@ public class RubyController : MonoBehaviour
 
     public void Dash(){
         isInvincible = true;
-        
+
     }
 
 }
