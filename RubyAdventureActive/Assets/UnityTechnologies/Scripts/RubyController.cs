@@ -236,7 +236,7 @@ public class RubyController : MonoBehaviour
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
         if(slowCog == true){
-            SlowProjectile slowprojectile = projectileObject.GetComponent<SlowProjectile>()
+            SlowProjectile slowprojectile = projectileObject.GetComponent<SlowProjectile>();
         }else{
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(lookDirection, 300);
