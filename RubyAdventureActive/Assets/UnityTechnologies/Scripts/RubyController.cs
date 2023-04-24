@@ -305,7 +305,11 @@ public class RubyController : MonoBehaviour
     }
 
     Ienumerator Dash(){
-        
+        isInvincible = true;
+        currentSpeed = 8;
+        WaitForSecondsRealtime(3);
+        isInvincible = false;
+        currentSpeed = 4;
     }
 
     
