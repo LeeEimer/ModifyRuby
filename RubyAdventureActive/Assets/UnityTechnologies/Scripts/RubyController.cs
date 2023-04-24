@@ -139,6 +139,8 @@ public class RubyController : MonoBehaviour
 
         setBotText();
         setAmmoText();
+        setSlowAmmoText();
+        setDashText();
 
         // ================= HEALTH ====================
         if (isInvincible)
