@@ -154,19 +154,28 @@ MonoBehaviour:
   maxHealth: 5
   timeInvincible: 2
   respawnPosition: {fileID: 0}
-  Level2Position: {fileID: 0}
   hitParticle: {fileID: 3032662816014629373, guid: 17da090cbd3ec504ba4da073aa459073,
     type: 3}
   projectilePrefab: {fileID: 540222671576581450, guid: 5847c61d20e6ce04dbc333e41dad3ec2,
     type: 3}
+  slowProjectilePrefab: {fileID: 6254188467362179759, guid: 45afecf090b73d14b8d210bfd98fd014,
+    type: 3}
   hitSound: {fileID: 8300000, guid: c7d3a91ac32abbe47a8931a8ffc37bc6, type: 3}
   shootingSound: {fileID: 8300000, guid: c87de0cae68cdbb409eec8ba23a860d0, type: 3}
+  winmusic: {fileID: 0}
+  losemusic: {fileID: 0}
   WinText: {fileID: 0}
   LoseText: {fileID: 0}
   FixedBots: {fileID: 0}
+  AmmoCount: {fileID: 0}
+  AmmoTextObj: {fileID: 0}
   WinTextObj: {fileID: 0}
   LoseTextObj: {fileID: 0}
   BotTextObj: {fileID: 0}
+  slowCog: 0
+  winEnabled: 0
+  restartAllowed: 0
+  inLevel2: 0
 --- !u!95 &7835389012148503428
 Animator:
   serializedVersion: 4
