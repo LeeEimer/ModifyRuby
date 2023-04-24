@@ -60,9 +60,9 @@ public class RubyController : MonoBehaviour
     public GameObject WinTextObj;
     public GameObject LoseTextObj;
     public GameObject BotTextObj;
-    public static int cogLimit; 
+    public static int cogLimit;
     public static int slowCogLimit;
-    public Boolean slowCog = false; 
+    public Boolean slowCog = false;
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
     public Boolean inLevel2 = false;
@@ -76,7 +76,7 @@ public class RubyController : MonoBehaviour
         invincibleTimer = -1.0f;
         currentHealth = maxHealth;
         cogLimit = 5;
-        slowCogLimit = 0; 
+        slowCogLimit = 0;
         hitParticle.Stop();
 
         // ==== ANIMATION =====
@@ -91,13 +91,14 @@ public class RubyController : MonoBehaviour
         setAmmoText();
         setBotText();
         winEnabled = false;
-        
+
     }
 
     void Update()
     {
         //move to level 2
-        if(JambiTalks > 1 && totalBots == 7){
+        if (JambiTalks > 1 && totalBots == 7)
+        {
             SceneManager.LoadScene("Level2");
             totalBots = 0;
             inLevel2 = true;
@@ -106,7 +107,8 @@ public class RubyController : MonoBehaviour
         //Respawn
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if(restartAllowed == true){
+            if (restartAllowed == true)
+            {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 totalBots = 0;
                 ChangeHealth(maxHealth);
@@ -117,9 +119,10 @@ public class RubyController : MonoBehaviour
                 speed = 4;
                 restartAllowed = false;
             }
-            if(winEnabled == true){
+            if (winEnabled == true)
+            {
                 inLevel2 = false;
-                SceneManager.LoadScene("MainScene"); 
+                SceneManager.LoadScene("MainScene");
             }
         }
 
@@ -157,7 +160,8 @@ public class RubyController : MonoBehaviour
 
         // ============== PROJECTILE ======================
 
-        if (Input.GetKeyDown(KeyCode.C)){
+        if (Input.GetKeyDown(KeyCode.C))
+        {
             if (cogLimit >= 1)
             {
                 cogLimit--;
@@ -165,14 +169,16 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.V)){
-            if(slowCogLimit >= 1){
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            if (slowCogLimit >= 1)
+            {
                 slowCog = true;
                 slowCogLimit--;
                 LaunchProjectile();
             }
         }
-    
+
         // ======== DIALOGUE ==========
         if (Input.GetKeyDown(KeyCode.X))
         {
@@ -219,7 +225,8 @@ public class RubyController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
-        if (currentHealth == 0){
+        if (currentHealth == 0)
+        {
             speed = 0;
             LoseTextObj.SetActive(true);
             audioSource.PlayOneShot(losemusic);
@@ -235,17 +242,21 @@ public class RubyController : MonoBehaviour
     {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
 
-        if(slowCog == true){
+        if (slowCog == true)
+        {
             SlowProjectile slowprojectile = projectileObject.GetComponent<SlowProjectile>();
-        }else{
+            slowprojectile.Launch(lookDirection, 300);
+        }
+        else
+        {
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(lookDirection, 300);
         }
 
         animator.SetTrigger("Launch");
         audioSource.PlayOneShot(shootingSound);
-        
-        
+
+
     }
 
     // =============== SOUND ==========================
@@ -274,7 +285,8 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    public void setAmmoText(){
+    public void setAmmoText()
+    {
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
     }
 
