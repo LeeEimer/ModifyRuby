@@ -63,6 +63,7 @@ public class RubyController : MonoBehaviour
     public GameObject BotTextObj;
     public static int cogLimit;
     public static int slowCogLimit;
+    public static int dashLimit;
     public Boolean slowCog = false;
     public Boolean winEnabled;
     public Boolean restartAllowed = false;
@@ -78,6 +79,7 @@ public class RubyController : MonoBehaviour
         currentHealth = maxHealth;
         cogLimit = 5;
         slowCogLimit = 0;
+        dashLimit = 0;
         hitParticle.Stop();
 
         // ==== ANIMATION =====
