@@ -159,9 +159,14 @@ public class RubyController : MonoBehaviour
         // ================ DASH ==========================
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            StartCoroutine(Dash());
-            Dash(); 
-            dashLimit--;
+            if(finDash = true){
+                StartCoroutine(Dash());
+                Dash();
+                dashLimit--;
+                finDash
+            }else{
+                currentSpeed = 4;
+            }
         }
         // ============== ANIMATION =======================
 
