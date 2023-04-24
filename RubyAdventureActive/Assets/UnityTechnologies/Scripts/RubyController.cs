@@ -75,6 +75,7 @@ public class RubyController : MonoBehaviour
         invincibleTimer = -1.0f;
         currentHealth = maxHealth;
         cogLimit = 5;
+        slowCogLimit = 0; 
         hitParticle.Stop();
 
         // ==== ANIMATION =====
