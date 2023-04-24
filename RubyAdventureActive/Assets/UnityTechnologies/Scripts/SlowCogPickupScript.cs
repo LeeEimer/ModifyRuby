@@ -13,7 +13,7 @@ public class SlowCogPickupScript : MonoBehaviour
         if (controller != null)
         {
 
-            RubyController.cogLimit += 4;
+            RubyController.slowCogLimit += 1;
             Destroy(gameObject);
 
             controller.PlaySound(collectedClip);
