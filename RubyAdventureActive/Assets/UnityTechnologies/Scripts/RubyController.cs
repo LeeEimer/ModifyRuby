@@ -71,7 +71,7 @@ public class RubyController : MonoBehaviour
 
     void Start()
     {
-        StartCaroutine(RubyController);
+        StartCaroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
 
@@ -155,13 +155,9 @@ public class RubyController : MonoBehaviour
 
         currentInput = move;
         
-        //Dash
+
         if(Input.GetKeyDown(KeyCode.Space)){
-            if(dashLimit >= 1){
-                speed = 8; 
-                WaitForSecondsRealtime(3); 
-                speed = 4;
-            }
+            Dash(); 
         }
         // ============== ANIMATION =======================
 
@@ -303,6 +299,11 @@ public class RubyController : MonoBehaviour
     public void setAmmoText()
     {
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
+    }
+
+    public void Dash(){
+        isInvincible = true;
+        
     }
 
 }
