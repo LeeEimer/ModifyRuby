@@ -8,7 +8,7 @@ using System.Collections;
 public class RubyController : MonoBehaviour
 {
     // ========= MOVEMENT =================
-    public float speed = 4;
+    public float currentSpeed;
 
     // ======== HEALTH ==========
     public int maxHealth = 5;
@@ -74,6 +74,7 @@ public class RubyController : MonoBehaviour
         StartCoroutine(Dash());
         // =========== MOVEMENT ==============
         rigidbody2d = GetComponent<Rigidbody2D>();
+        currentSpeed = 4;
 
         // ======== HEALTH ==========
         invincibleTimer = -1.0f;
@@ -120,7 +121,7 @@ public class RubyController : MonoBehaviour
                 transform.position = respawnPosition.position;
                 WinTextObj.SetActive(false);
                 LoseTextObj.SetActive(false);
-                speed = 4;
+                currentSpeed = 4;
                 restartAllowed = false;
             }
             if (winEnabled == true)
@@ -211,7 +212,7 @@ public class RubyController : MonoBehaviour
     {
         Vector2 position = rigidbody2d.position;
 
-        position = position + currentInput * speed * Time.deltaTime;
+        position = position + currentInput * currentSpeed * Time.deltaTime;
 
         rigidbody2d.MovePosition(position);
     }
@@ -239,7 +240,7 @@ public class RubyController : MonoBehaviour
 
         if (currentHealth == 0)
         {
-            speed = 0;
+            currentSpeed = 0;
             LoseTextObj.SetActive(true);
             audioSource.PlayOneShot(losemusic);
             restartAllowed = true;
@@ -294,7 +295,7 @@ public class RubyController : MonoBehaviour
             //audioSource.PlayOneShot(winmusic);
             winEnabled = true;
             restartAllowed = true;
-            speed = 0;
+            currentSpeed = 0;
         }
     }
 
@@ -305,9 +306,9 @@ public class RubyController : MonoBehaviour
 
     IEnumerator Dash(){
         isInvincible = true;
-        speed = 8; 
+        currentSpeed = 8; 
         WaitForSecondsRealtime(3);
-        speed = 4;
+        currentSpeed = 4;
         isInvincible = false;
         return null; 
     }
