@@ -70,6 +70,7 @@ public class RubyController : MonoBehaviour
     public Boolean inLevel2 = false;
     private float dashLen; 
     private float dashCoolDown;
+    public int dashSpeed = 8;
 
     void Start()
     {
