@@ -32,11 +32,11 @@ public class SlowProjectile : MonoBehaviour
         //if the object we touched wasn't an enemy, just destroy the projectile.
         if (e != null)
         {
-            e.slowSpeed();
+            e.setSpeed(1);
         }
         if (b != null)
         {
-            b.slowSpeed();
+            b.setSpeed(2); 
         }
 
         Destroy(gameObject);

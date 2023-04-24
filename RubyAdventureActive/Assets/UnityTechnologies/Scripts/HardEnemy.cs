@@ -41,6 +41,7 @@ public class HardEnemy : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
         smokeParticleEffect.Play();
+        setSpeed(4); 
     }
 
     void Update()
@@ -95,7 +96,8 @@ public class HardEnemy : MonoBehaviour
         audioSource.PlayOneShot(fixedSound);
     }
 
-    public void slowSpeed(){
-        speed = speed / 2;
+    public void setSpeed(int x)
+    {
+        speed = x;
     }
 }
