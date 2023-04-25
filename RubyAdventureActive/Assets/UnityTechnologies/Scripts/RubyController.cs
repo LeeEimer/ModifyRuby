@@ -314,8 +314,7 @@ public class RubyController : MonoBehaviour
             AmmoTextObj.SetActive(false);
             SlowCogTextObj.SetActive(false);
             DashCountObj.SetActive(false);
-            stopMusic();
-            playWin();
+            audioSource.PlayOneShot(winmusic);
         }
     }
 
@@ -345,27 +344,6 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    public void playWin()
-    {
-        audioSource.clip = winmusic;
-        audioSource.Play();
-    }
-
-    public void playLose()
-    {
-        audioSource.clip = losemusic;
-        audioSource.Play();
-    }
-
-    public void playBackground()
-    {
-        audioSource.clip = backgroundMusic;
-        audioSource.Play();
-    }
-
-    public void stopMusic()
-    {
-        audioSource.Stop();
-    }
+    
 
 }
