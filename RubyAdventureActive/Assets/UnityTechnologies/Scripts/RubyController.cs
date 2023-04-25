@@ -110,7 +110,7 @@ public class RubyController : MonoBehaviour
     void Update()
     {
         //move to level 2
-        if (JambiTalks == 3 && totalBots == 7)
+        if (JambiTalks == 3 && totalBots > )
         {
             SceneManager.LoadScene("Level2");
             totalBots = 0;
