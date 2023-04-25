@@ -115,7 +115,6 @@ public class RubyController : MonoBehaviour
             SceneManager.LoadScene("Level2");
             totalBots = 0;
             inLevel2 = true;
-            playBackground();
         }
 
         //Respawn
