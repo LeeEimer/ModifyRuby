@@ -311,7 +311,8 @@ public class RubyController : MonoBehaviour
            AmmoTextObj.SetActive(false);
            SlowCogTextObj.SetActive(false);
            DashCountObj.SetActive(false);
-           audioSource.PlayOneShot(winmusic);
+           stopMusic();
+           playWin();
         }
     }
 
