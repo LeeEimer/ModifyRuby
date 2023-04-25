@@ -106,7 +106,7 @@ public class RubyController : MonoBehaviour
         winEnabled = false;
 
         audioSource.PlayOneShot(backgroundMusic);
-        totalBots = 5;
+        totalBots = 6;
     }
 
     void Update()
@@ -300,11 +300,11 @@ public class RubyController : MonoBehaviour
     public void setBotText()
     {
         FixedBots.text = "Fixed Bots: " + totalBots.ToString();
-        if (totalBots == 7)
+        if (killedBots == 5)
         {
             FixedBots.text = "Talk to Jambi!";
         }
-        if (totalBots == 8)
+        if (killedBots == 7)
         {
             currentSpeed = 0;
             WinTextObj.SetActive(true);
