@@ -115,7 +115,8 @@ public class RubyController : MonoBehaviour
         if (JambiTalks == 3 && killedBots == totalBots)
         {
             SceneManager.LoadScene("Level2");
-            totalBots = 0;
+            totalBots = 7;
+            killedBots = 0;
             inLevel2 = true;
         }
 
@@ -125,7 +126,8 @@ public class RubyController : MonoBehaviour
             if (restartAllowed == true)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                totalBots = 0;
+                totalBots = 7;
+                killedBots = 0;
                 ChangeHealth(maxHealth);
                 cogLimit = 5;
                 transform.position = respawnPosition.position;
@@ -138,6 +140,8 @@ public class RubyController : MonoBehaviour
             {
                 inLevel2 = false;
                 SceneManager.LoadScene("MainScene");
+                totalBots = 5;
+                killedBots = 0;
             }
         }
 
