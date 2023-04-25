@@ -253,7 +253,8 @@ public class RubyController : MonoBehaviour
         {
             currentSpeed = 0;
             LoseTextObj.SetActive(true);
-            audioSource.PlayOneShot(losemusic);
+            stopMusic();
+            playLose();
             restartAllowed = true;
         }
 
