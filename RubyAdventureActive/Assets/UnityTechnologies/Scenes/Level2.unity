@@ -1073,7 +1073,7 @@ MonoBehaviour:
     type: 3}
   hitSound: {fileID: 8300000, guid: 4ecf2abcdd2987b4ab2773ac82a0f2de, type: 3}
   fixedSound: {fileID: 8300000, guid: 4e356d8e36201c14da953082c4d569ab, type: 3}
-  pointsWorth: 5
+  pointsWorth: 2
 --- !u!1 &185967270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,7 +2486,7 @@ MonoBehaviour:
     type: 3}
   hitSound: {fileID: 8300000, guid: 4ecf2abcdd2987b4ab2773ac82a0f2de, type: 3}
   fixedSound: {fileID: 8300000, guid: 4e356d8e36201c14da953082c4d569ab, type: 3}
-  pointsWorth: 1
+  pointsWorth: 2
 --- !u!1 &337575211
 GameObject:
   m_ObjectHideFlags: 0
