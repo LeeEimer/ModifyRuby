@@ -59,7 +59,7 @@ public class RubyController : MonoBehaviour
     public TextMeshProUGUI FixedBots;
     public TextMeshProUGUI AmmoCount;
     public TextMeshProUGUI SlowCogCount;
-    public TextMeshProUGUI DashCount; 
+    public TextMeshProUGUI DashCount;
     public GameObject DashCountObj;
     public GameObject SlowCogTextObj;
     public GameObject AmmoTextObj;
@@ -168,10 +168,11 @@ public class RubyController : MonoBehaviour
         }
 
         currentInput = move;
-        
+
         // ================ DASH ==========================
 
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             StartCoroutine(Dash());
             Dash();
             dashLimit--;
@@ -201,7 +202,8 @@ public class RubyController : MonoBehaviour
                 slowCogLimit--;
                 LaunchProjectile();
             }
-            if(slowCogLimit < 1){
+            if (slowCogLimit < 1)
+            {
                 slowCog = false;
             }
         }
@@ -306,13 +308,14 @@ public class RubyController : MonoBehaviour
         }
         if (totalBots == 9)
         {
-           currentSpeed = 0; 
-           BotTextObj.SetActive(false);
-           AmmoTextObj.SetActive(false);
-           SlowCogTextObj.SetActive(false);
-           DashCountObj.SetActive(false);
-           stopMusic();
-           playWin();
+            currentSpeed = 0;
+            WinTextObj.SetActive(true);
+            BotTextObj.SetActive(false);
+            AmmoTextObj.SetActive(false);
+            SlowCogTextObj.SetActive(false);
+            DashCountObj.SetActive(false);
+            stopMusic();
+            playWin();
         }
     }
 
@@ -321,16 +324,20 @@ public class RubyController : MonoBehaviour
         AmmoCount.text = "Ammo: " + cogLimit.ToString();
     }
 
-    public void setSlowAmmoText(){
+    public void setSlowAmmoText()
+    {
         SlowCogCount.text = "Slow Ammo: " + slowCogLimit.ToString();
     }
 
-    public void setDashText(){
+    public void setDashText()
+    {
         DashCount.text = "Dashes: " + dashLimit.ToString();
     }
 
-    IEnumerator Dash(){
-        if(dashLimit >= 1){
+    IEnumerator Dash()
+    {
+        if (dashLimit >= 1)
+        {
             isInvincible = true;
             currentSpeed = 8;
             yield return new WaitForSecondsRealtime(2);
@@ -338,23 +345,27 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    public void playWin(){
+    public void playWin()
+    {
         audioSource.clip = winmusic;
         audioSource.Play();
     }
 
-    public void playLose(){
+    public void playLose()
+    {
         audioSource.clip = losemusic;
         audioSource.Play();
     }
 
-    public void playBackground(){
+    public void playBackground()
+    {
         audioSource.clip = backgroundMusic;
         audioSource.Play();
     }
 
-    public void stopMusic(){
+    public void stopMusic()
+    {
         audioSource.Stop();
     }
-    
+
 }
