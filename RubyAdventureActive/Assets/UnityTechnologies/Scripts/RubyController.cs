@@ -306,7 +306,7 @@ public class RubyController : MonoBehaviour
         {
             FixedBots.text = "Talk to Jambi!";
         }
-        if (totalBots == 9)
+        if (totalBots == 7)
         {
             currentSpeed = 0;
             WinTextObj.SetActive(true);
