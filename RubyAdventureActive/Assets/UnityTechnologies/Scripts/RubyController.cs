@@ -298,7 +298,7 @@ public class RubyController : MonoBehaviour
     public void setBotText()
     {
         FixedBots.text = "Fixed Bots: " + totalBots.ToString();
-        if (totalBots == 5 && JambiTalks != 2)
+        if (totalBots == 6)
         {
             FixedBots.text = "Talk to Jambi!";
         }
