@@ -28,6 +28,7 @@ public class NonPlayerCharacter : MonoBehaviour
     public void DisplayDialog()
     {
         RubyController.JambiTalks += 1;
+        RubyController.totalBots += 1;
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
     }
