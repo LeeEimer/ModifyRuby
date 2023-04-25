@@ -269,14 +269,15 @@ public class RubyController : MonoBehaviour
         {
             SlowProjectile slowprojectile = slowprojectileObject.GetComponent<SlowProjectile>();
             slowprojectile.Launch(lookDirection, 300);
+            animator.SetTrigger("Launch");
         }
         else
         {
             Projectile projectile = projectileObject.GetComponent<Projectile>();
             projectile.Launch(lookDirection, 300);
+            animator.SetTrigger("Launch");
         }
 
-        animator.SetTrigger("Launch");
         audioSource.PlayOneShot(shootingSound);
 
 
