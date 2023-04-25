@@ -104,7 +104,7 @@ public class RubyController : MonoBehaviour
         setDashText();
         winEnabled = false;
 
-        playBackground();
+        audioSource.PlayOneShot(backgroundMusic);
     }
 
     void Update()
@@ -120,7 +120,6 @@ public class RubyController : MonoBehaviour
         //Respawn
         if (Input.GetKeyDown(KeyCode.R))
         {
-            stopMusic();
             if (restartAllowed == true)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -132,13 +131,11 @@ public class RubyController : MonoBehaviour
                 LoseTextObj.SetActive(false);
                 currentSpeed = 4;
                 restartAllowed = false;
-                playBackground();
             }
             if (winEnabled == true)
             {
                 inLevel2 = false;
                 SceneManager.LoadScene("MainScene");
-                playBackground();
             }
         }
 
@@ -258,8 +255,7 @@ public class RubyController : MonoBehaviour
         {
             currentSpeed = 0;
             LoseTextObj.SetActive(true);
-            stopMusic();
-            playLose();
+            audioSource.PlayOneShot(losemusic);
             restartAllowed = true;
         }
 
