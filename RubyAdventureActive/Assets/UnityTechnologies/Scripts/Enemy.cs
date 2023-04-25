@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
 		animator.SetTrigger("Fixed");
 		repaired = true;
 
-        RubyController.totalBots += 1;
+        RubyController.killedBots += 1;
 
 		smokeParticleEffect.Stop();
 
