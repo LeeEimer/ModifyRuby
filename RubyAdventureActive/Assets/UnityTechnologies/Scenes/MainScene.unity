@@ -1606,7 +1606,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378960948}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e8cb00566f82df74e873a4f9a4c0d78e, type: 3}
@@ -2933,6 +2933,11 @@ PrefabInstance:
       propertyPath: level2Position
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1584281282501442207, guid: 6809f23136949a9488669a0f58179ef9,
+        type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: e8cb00566f82df74e873a4f9a4c0d78e, type: 3}
     - target: {fileID: 1584281282501442207, guid: 6809f23136949a9488669a0f58179ef9,
         type: 3}
       propertyPath: respawnPosition
