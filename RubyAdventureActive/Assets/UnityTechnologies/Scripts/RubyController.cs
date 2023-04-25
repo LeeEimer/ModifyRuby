@@ -302,6 +302,10 @@ public class RubyController : MonoBehaviour
         {
            currentSpeed = 0; 
            BotTextObj.SetActive(false);
+           AmmoTextObj.SetActive(false);
+           SlowCogTextObj.SetActive(false);
+           DashCountObj.SetActive(false);
+           audioSource.PlayOneShot(winmusic);
         }
     }
 
