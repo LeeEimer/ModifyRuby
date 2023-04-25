@@ -104,7 +104,7 @@ public class RubyController : MonoBehaviour
         setDashText();
         winEnabled = false;
 
-        audioSource.PlayOneShot(backgroundMusic);
+        audioSource.Play(backgroundMusic);
     }
 
     void Update()
