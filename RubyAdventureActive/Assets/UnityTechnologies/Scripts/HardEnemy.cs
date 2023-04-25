@@ -82,7 +82,7 @@ public class HardEnemy : MonoBehaviour
         animator.SetTrigger("Fixed");
         repaired = true;
 
-        RubyController.totalBots += pointsWorth;
+        RubyController.killedBots += pointsWorth;
 
         smokeParticleEffect.Stop();
 
