@@ -103,6 +103,7 @@ public class RubyController : MonoBehaviour
         setBotText();
         setDashText();
         winEnabled = false;
+        
 
     }
 
