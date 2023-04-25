@@ -104,7 +104,7 @@ public class RubyController : MonoBehaviour
         setDashText();
         winEnabled = false;
 
-        audioSource.Play(backgroundMusic);
+        playBackground();
     }
 
     void Update()
@@ -115,7 +115,7 @@ public class RubyController : MonoBehaviour
             SceneManager.LoadScene("Level2");
             totalBots = 0;
             inLevel2 = true;
-            audioSource.PlayOneShot(backgroundMusic);
+            playBackground();
         }
 
         //Respawn
@@ -334,5 +334,23 @@ public class RubyController : MonoBehaviour
         }
     }
 
+    public void playWin(){
+        audioSource.clip = winmusic;
+        audioSource.Play();
+    }
+
+    public void playLose(){
+        audioSource.clip = losemusic;
+        audioSource.Play();
+    }
+
+    public void playBackground(){
+        audioSource.clip = backgroundMusic;
+        audioSource.Play();
+    }
+
+    public void stopMusic(){
+        audioSource.Stop();
+    }
     
 }
