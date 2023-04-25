@@ -305,7 +305,6 @@ public class RubyController : MonoBehaviour
         {
             BotTextObj.SetActive(false);
             WinTextObj.SetActive(true);
-            //audioSource.PlayOneShot(winmusic);
             winEnabled = true;
             restartAllowed = true;
             currentSpeed = 0;
