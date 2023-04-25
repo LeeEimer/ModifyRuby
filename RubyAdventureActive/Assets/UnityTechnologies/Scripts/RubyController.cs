@@ -103,8 +103,8 @@ public class RubyController : MonoBehaviour
         setBotText();
         setDashText();
         winEnabled = false;
-        
 
+        audioSource.PlayOneShot(backgroundMusic);
     }
 
     void Update()
@@ -115,6 +115,7 @@ public class RubyController : MonoBehaviour
             SceneManager.LoadScene("Level2");
             totalBots = 0;
             inLevel2 = true;
+            audioSource.PlayOneShot(backgroundMusic);
         }
 
         //Respawn
