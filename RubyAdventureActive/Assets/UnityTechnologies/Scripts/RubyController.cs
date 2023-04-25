@@ -300,13 +300,8 @@ public class RubyController : MonoBehaviour
         }
         if (totalBots == 9)
         {
-            SceneManager.LoadScene("Level3");
-        }
-        if (totalBots == 12){
-            //make boss visible, play boss music
-
-            //if boss defeated, win game
-
+           currentSpeed = 0; 
+           BotTextObj.SetActive(false);
         }
     }
 
