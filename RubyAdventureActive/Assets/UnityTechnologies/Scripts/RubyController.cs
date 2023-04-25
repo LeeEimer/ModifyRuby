@@ -303,11 +303,7 @@ public class RubyController : MonoBehaviour
         }
         if (totalBots == 9)
         {
-            BotTextObj.SetActive(false);
-            WinTextObj.SetActive(true);
-            winEnabled = true;
-            restartAllowed = true;
-            currentSpeed = 0;
+            SceneManager.LoadScene("Level3");
         }
     }
 
