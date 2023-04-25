@@ -212,7 +212,6 @@ public class RubyController : MonoBehaviour
             if (hit.collider != null)
             {
                 NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-                NPCOtherScript otherchar = hit.collider.GetComponent<NonPlayerCharacter()>;
                 if (character != null)
                 {
                     character.DisplayDialog();
