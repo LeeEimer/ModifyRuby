@@ -138,6 +138,7 @@ public class RubyController : MonoBehaviour
             {
                 inLevel2 = false;
                 SceneManager.LoadScene("MainScene");
+                playBackground();
             }
         }
 
