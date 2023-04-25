@@ -303,7 +303,7 @@ public class RubyController : MonoBehaviour
 
     public void setBotText()
     {
-        FixedBots.text = "Fixed Bots: " + totalBots.ToString();
+        FixedBots.text = "Fixed Bots: " + killedBots.ToString();
         if (killedBots == 5)
         {
             FixedBots.text = "Talk to Jambi!";
