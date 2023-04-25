@@ -115,6 +115,9 @@ public class RubyController : MonoBehaviour
             inLevel2 = true;
         }
 
+        //move to level 3
+        if(totalBots == )
+
         //Respawn
         if (Input.GetKeyDown(KeyCode.R))
         {
