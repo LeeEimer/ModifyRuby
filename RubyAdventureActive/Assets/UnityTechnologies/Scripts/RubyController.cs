@@ -25,6 +25,7 @@ public class RubyController : MonoBehaviour
     public AudioClip shootingSound;
     public AudioClip winmusic;
     public AudioClip losemusic;
+    public AudioClip backgroundMusic;
 
 
     // ======== HEALTH ==========
