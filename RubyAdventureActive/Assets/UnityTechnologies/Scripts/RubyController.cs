@@ -106,7 +106,7 @@ public class RubyController : MonoBehaviour
         winEnabled = false;
 
         audioSource.PlayOneShot(backgroundMusic);
-        totalBots = 6;
+        totalBots = 5;
     }
 
     void Update()
