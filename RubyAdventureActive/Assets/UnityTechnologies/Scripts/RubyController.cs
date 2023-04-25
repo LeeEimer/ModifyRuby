@@ -53,6 +53,7 @@ public class RubyController : MonoBehaviour
 
 
     public static int totalBots;
+    public static int killedBots;
     public static int JambiTalks;
     public TextMeshProUGUI WinText;
     public TextMeshProUGUI LoseText;
@@ -105,12 +106,13 @@ public class RubyController : MonoBehaviour
         winEnabled = false;
 
         audioSource.PlayOneShot(backgroundMusic);
+        totalBots = 5;
     }
 
     void Update()
     {
         //move to level 2
-        if (JambiTalks == 3 && totalBots > 5)
+        if (JambiTalks == 3 && killedBots == totalBots)
         {
             SceneManager.LoadScene("Level2");
             totalBots = 0;
