@@ -115,9 +115,6 @@ public class RubyController : MonoBehaviour
             inLevel2 = true;
         }
 
-        //move to level 3
-        if(totalBots == )
-
         //Respawn
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -304,6 +301,10 @@ public class RubyController : MonoBehaviour
         if (totalBots == 9)
         {
             SceneManager.LoadScene("Level3");
+        }
+        if (totalBots == 12){
+            //make boss visible
+            
         }
     }
 
