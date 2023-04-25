@@ -5943,12 +5943,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1175494578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 174584209622451115, guid: adb2cd72187612840948186a3e629781,
-    type: 3}
-  m_PrefabInstance: {fileID: 1368577242}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1179883673
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,26 +7725,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1543740149 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8278870854704238119, guid: adb2cd72187612840948186a3e629781,
-    type: 3}
-  m_PrefabInstance: {fileID: 1368577242}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1543740159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543740149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04401e334d061744eaaa81adb93f363f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayTime: 4
-  dialogBox: {fileID: 1175494578}
 --- !u!1 &1565732843
 GameObject:
   m_ObjectHideFlags: 3
